@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal, onOpenResume }) 
           <div className="md:col-span-5 space-y-3">
             <div className="flex items-center gap-2">
               <span className="font-display font-extrabold text-xl text-white">
-                SANDHIYA <span className="text-cyan-400">P</span>
+                SANDHIYA
               </span>
               <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
                 v2.4
@@ -163,7 +163,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal, onOpenResume }) 
           </div>
 
           <div className="text-center sm:text-right">
-            <span>© {new Date().getFullYear()} Sandhiya P. Crafted with modern 3D engineering.</span>
+            <span>© {new Date().getFullYear()} Sandhiya. Crafted with modern 3D engineering.</span>
           </div>
 
           <button

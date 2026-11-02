@@ -99,7 +99,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         <div className="flex-1 bg-slate-900/60 p-2 min-h-[460px] overflow-hidden">
           <iframe
             src={`${PERSONAL_INFO.resumePath}#toolbar=1&navpanes=0&scrollbar=1`}
-            title="Sandhiya P Resume"
+            title="Sandhiya Resume"
             className="w-full h-full rounded-lg border border-slate-800 min-h-[460px]"
           />
         </div>

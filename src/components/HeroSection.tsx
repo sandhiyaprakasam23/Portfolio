@@ -65,7 +65,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               &lt;SENIOR WORKSTATION /&gt; HELLO, I'M
             </p>
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white">
-              SANDHIYA <span className="gradient-text-cyan-violet">P</span>
+              <span className="gradient-text-cyan-violet">SANDHIYA</span>
             </h1>
             <h2 className="font-display font-semibold text-lg sm:text-2xl text-slate-200">
               Python Full Stack Developer <span className="text-cyan-400">|</span> Software Engineer

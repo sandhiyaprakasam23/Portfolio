@@ -65,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <div className="flex flex-col">
             <span className="font-display font-bold text-base sm:text-lg tracking-wider text-white group-hover:text-cyan-300 transition-colors">
-              SANDHIYA P
+              SANDHIYA
             </span>
             <span className="text-[10px] font-mono text-cyan-400/80 -mt-1 tracking-widest uppercase">
               Full Stack Dev

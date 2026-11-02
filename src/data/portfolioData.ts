@@ -42,7 +42,7 @@ export interface CertificationItem {
 }
 
 export const PERSONAL_INFO = {
-  name: "SANDHIYA P",
+  name: "SANDHIYA",
   title: "Python Full Stack Developer | Software Engineer",
   shortRole: "Python Full Stack Developer",
   location: "Chennai / Bengaluru, India",
@@ -273,7 +273,7 @@ from .engine import calculate_breach_probability
 class SLAManagementViewSet(viewsets.ModelViewSet):
     """
     HIPAA-compliant Real Estate & Healthcare SLA Engine
-    Engineered by Sandhiya P
+    Engineered by Sandhiya
     """
     permission_classes = [IsAuthenticated]
     serializer_class = SLATicketSerializer
@@ -329,7 +329,7 @@ export const VoiceTextStream = ({ language = 'en-US' }) => {
 };`,
 
   sql: `-- PostgreSQL Schema: Real Estate SLA & Patient Auditing
--- Optimized by Sandhiya P
+-- Optimized by Sandhiya
 CREATE TABLE IF NOT EXISTS clinical_sla_audit (
     audit_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     entity_id VARCHAR(64) NOT NULL,

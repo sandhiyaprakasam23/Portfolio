@@ -253,7 +253,7 @@ export const InteractiveTerminal: React.FC<TerminalProps> = ({
                 Schedule via WhatsApp 💬
               </a>
               <a
-                href={`mailto:${PERSONAL_INFO.email}?subject=Interview%20Invitation%20-%20Sandhiya%20P&body=Hi%20Sandhiya,%20we%20reviewed%20your%20portfolio%20and%20would%20like%20to%20schedule%20an%20interview.`}
+                href={`mailto:${PERSONAL_INFO.email}?subject=Interview%20Invitation%20-%20Sandhiya&body=Hi%20Sandhiya,%20we%20reviewed%20your%20portfolio%20and%20would%20like%20to%20schedule%20an%20interview.`}
                 className="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded font-semibold text-xs transition-colors"
               >
                 Send Interview Invite ✉️

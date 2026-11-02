@@ -261,7 +261,7 @@ export const HolographicDeskImage2: React.FC<HolographicDeskProps> = ({
 
             <div className="space-y-1.5">
               <h3 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
-                SANDHIYA <span className="gradient-text-cyan-violet">P</span>
+                <span className="gradient-text-cyan-violet">SANDHIYA</span>
               </h3>
               <p className="font-display font-semibold text-lg text-cyan-300">
                 WE DESIGN DIGITAL EXPERIENCES

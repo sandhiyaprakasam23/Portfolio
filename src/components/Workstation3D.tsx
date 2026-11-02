@@ -43,7 +43,7 @@ from .notifications import trigger_sla_alert
 class SLAManagementEngine:
     """
     Real Estate ERP & Healthcare SLA Core
-    Engineered by Sandhiya P
+    Engineered by Sandhiya
     """
     def __init__(self, ticket_id: str):
         self.ticket = SLATicket.objects.get(id=ticket_id)

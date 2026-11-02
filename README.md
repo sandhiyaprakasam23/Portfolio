@@ -1,6 +1,6 @@
-# SANDHIYA P — Premium 3D Software Developer Portfolio & Workstation ⚡
+# SANDHIYA — Premium 3D Software Developer Portfolio & Workstation ⚡
 
-A futuristic, high-performance developer portfolio built with **React 19**, **Vite**, **TypeScript**, **Three.js**, and **Tailwind CSS**. Designed specifically for **Sandhiya P** (Python Full Stack Developer & Software Engineer) to showcase commercial Healthcare IT experience, real-world projects, live deployments, and technical credentials.
+A futuristic, high-performance developer portfolio built with **React 19**, **Vite**, **TypeScript**, **Three.js**, and **Tailwind CSS**. Designed specifically for **Sandhiya** (Python Full Stack Developer & Software Engineer) to showcase commercial Healthcare IT experience, real-world projects, live deployments, and technical credentials.
 
 ---
 
