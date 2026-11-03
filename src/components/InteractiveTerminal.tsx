@@ -34,14 +34,14 @@ export const InteractiveTerminal: React.FC<TerminalProps> = ({
   useEffect(() => {
     setHistory([
       {
-        command: 'system.init',
+        command: 'whoami',
         output: (
           <div className="space-y-1.5 text-xs sm:text-sm">
-            <p className="text-cyan-400 font-bold">
-              ⚡ SANDHIYA OS v2.4.0 (x86_64-pc-linux-gnu) - Senior Developer Workstation
+            <p className="text-cyan-300 font-semibold">
+              👋 Sandhiya — Python Full Stack Developer &amp; Software Engineer
             </p>
             <p className="text-slate-400">
-              Session initialized for guest user. Type <span className="text-amber-400 font-semibold">'help'</span> to explore commands or <span className="text-emerald-400 font-semibold">'hire'</span> for immediate recruitment details.
+              Welcome to my developer shell. Type <span className="text-amber-400 font-semibold">'help'</span> to see commands or <span className="text-emerald-400 font-semibold">'projects'</span> to view my work.
             </p>
           </div>
         ),
@@ -341,7 +341,7 @@ export const InteractiveTerminal: React.FC<TerminalProps> = ({
           <div className="flex items-center gap-2">
             <TerminalIcon className="w-4 h-4 text-cyan-400" />
             <span className="font-mono text-xs font-semibold text-slate-300 tracking-wide">
-              sandhiya@workstation:~ (interactive-cli)
+              sandhiya@macbook-pro:~ (zsh)
             </span>
           </div>
 

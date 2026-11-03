@@ -38,7 +38,7 @@ export const EducationCertificationsSection: React.FC = () => {
               </div>
 
               <p className="text-sm text-slate-300 leading-relaxed">
-                {EDUCATION.description}
+                {EDUCATION.story}
               </p>
 
               {/* Language Proficiency */}

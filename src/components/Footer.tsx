@@ -46,14 +46,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal, onOpenResume }) 
           <div className="md:col-span-5 space-y-3">
             <div className="flex items-center gap-2">
               <span className="font-display font-extrabold text-xl text-white">
-                SANDHIYA
+                Sandhiya
               </span>
-              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
-                v2.4
+              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                Full Stack Engineer
               </span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Python Full Stack Developer &amp; Software Engineer specializing in HIPAA-compliant healthcare applications, Django REST Framework, and React.js ecosystems.
+              Python Full Stack Developer specializing in HIPAA-compliant healthcare systems, Django REST Framework, and reactive React applications.
             </p>
             <div className="flex items-center gap-2 text-xs font-mono text-emerald-400">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -67,32 +67,32 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal, onOpenResume }) 
               Navigation
             </h4>
             <div className="flex flex-col gap-1.5 font-mono text-xs text-slate-400">
-              <a href="#about" className="hover:text-cyan-400 transition-colors">// About Me</a>
-              <a href="#skills" className="hover:text-cyan-400 transition-colors">// Technical Arsenal</a>
-              <a href="#experience" className="hover:text-cyan-400 transition-colors">// Experience</a>
-              <a href="#projects" className="hover:text-cyan-400 transition-colors">// Projects</a>
-              <a href="#education" className="hover:text-cyan-400 transition-colors">// Education</a>
-              <a href="#contact" className="hover:text-cyan-400 transition-colors">// Contact Channels</a>
+              <a href="#about" className="hover:text-cyan-400 transition-colors">About Me</a>
+              <a href="#skills" className="hover:text-cyan-400 transition-colors">Technical Skills</a>
+              <a href="#experience" className="hover:text-cyan-400 transition-colors">Work Experience</a>
+              <a href="#projects" className="hover:text-cyan-400 transition-colors">Featured Projects</a>
+              <a href="#education" className="hover:text-cyan-400 transition-colors">Education &amp; Credentials</a>
+              <a href="#contact" className="hover:text-cyan-400 transition-colors">Get In Touch</a>
             </div>
           </div>
 
-          {/* System Telemetry & CLI */}
+          {/* Location & Local Time */}
           <div className="md:col-span-4 space-y-3">
             <h4 className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-300">
-              System Telemetry
+              Status &amp; Availability
             </h4>
             <div className="p-3.5 rounded-xl bg-[#0B1020] border border-slate-800 space-y-2 text-xs font-mono">
               <div className="flex justify-between text-slate-400">
                 <span>LOCAL TIME:</span>
-                <span className="text-cyan-400 font-bold">{timeStr || '19:40:00 IST'}</span>
+                <span className="text-cyan-400 font-bold">{timeStr || 'IST'}</span>
               </div>
               <div className="flex justify-between text-slate-400">
-                <span>SYSTEM STATUS:</span>
-                <span className="text-emerald-400">OPTIMAL (100%)</span>
+                <span>AVAILABILITY:</span>
+                <span className="text-emerald-400 font-semibold">Immediate Joiner (0 Days)</span>
               </div>
               <div className="flex justify-between text-slate-400">
-                <span>DEPLOYMENT:</span>
-                <span className="text-slate-300">VITE + REACT 19</span>
+                <span>LOCATION:</span>
+                <span className="text-slate-300">Bengaluru / Chennai / Remote</span>
               </div>
             </div>
 
@@ -103,10 +103,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal, onOpenResume }) 
                   sound.playClick();
                   onOpenTerminal();
                 }}
-                className="flex-1 py-2 px-3 rounded-lg bg-slate-900 border border-cyan-500/20 text-cyan-300 hover:bg-cyan-500/10 text-xs font-mono transition-colors flex items-center justify-center gap-1.5"
+                className="flex-1 py-2 px-3 rounded-lg bg-slate-900 border border-cyan-500/20 text-cyan-300 hover:bg-cyan-500/10 text-xs font-mono transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <Terminal className="w-3.5 h-3.5" />
-                <span>Launch CLI</span>
+                <span>Developer CLI</span>
               </button>
               <button
                 type="button"
@@ -114,7 +114,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal, onOpenResume }) 
                   sound.playSuccess();
                   onOpenResume();
                 }}
-                className="flex-1 py-2 px-3 rounded-lg bg-slate-900 border border-violet-500/20 text-violet-300 hover:bg-violet-500/10 text-xs font-mono transition-colors"
+                className="flex-1 py-2 px-3 rounded-lg bg-slate-900 border border-violet-500/20 text-violet-300 hover:bg-violet-500/10 text-xs font-mono transition-colors cursor-pointer"
               >
                 Resume PDF
               </button>
@@ -163,7 +163,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal, onOpenResume }) 
           </div>
 
           <div className="text-center sm:text-right">
-            <span>© {new Date().getFullYear()} Sandhiya. Crafted with modern 3D engineering.</span>
+            <span>© {new Date().getFullYear()} Sandhiya. Handcrafted with React, TypeScript &amp; Python.</span>
           </div>
 
           <button

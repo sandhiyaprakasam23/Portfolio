@@ -80,15 +80,15 @@ export const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="space-y-2 mb-16 text-center sm:text-left">
+        <div className="space-y-2 mb-14 text-center sm:text-left">
           <div className="inline-flex items-center gap-2 font-mono text-xs text-cyan-400 tracking-widest uppercase">
-            <span>// 06. GET IN TOUCH</span>
+            <span>// 06. CONTACT</span>
           </div>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
-            Let's Build Something Exceptional Together
+          <h2 className="font-display font-bold text-3xl sm:text-4xl text-white">
+            Have an Engineering Role in Mind? Let's Talk.
           </h2>
           <p className="text-slate-400 max-w-2xl text-sm sm:text-base">
-            Immediate joiner available for Full Stack, Python, Django, and React engineering opportunities in Bengaluru, Chennai, or Remote.
+            I am actively interviewing for Full Stack, Python, Django, and React engineering positions in Bengaluru, Chennai, or Remote. Immediate joiner with 0 days notice.
           </p>
         </div>
 

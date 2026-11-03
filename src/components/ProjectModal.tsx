@@ -78,6 +78,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             )}
           </div>
 
+          {/* Problem & Role */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+              <span className="text-[11px] font-mono text-cyan-400 uppercase font-semibold">Problem Solved:</span>
+              <p className="text-xs text-slate-300 leading-relaxed">{project.problemSolved}</p>
+            </div>
+            <div className="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+              <span className="text-[11px] font-mono text-violet-400 uppercase font-semibold">My Engineering Role:</span>
+              <p className="text-xs text-slate-300 leading-relaxed">{project.myRole}</p>
+            </div>
+          </div>
+
           {/* Overview */}
           <div>
             <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-cyan-400 mb-2 flex items-center gap-2">

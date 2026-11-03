@@ -111,6 +111,18 @@ export const ProjectsSection: React.FC = () => {
                   {project.description}
                 </p>
 
+                {/* Problem Solved (Human Senior Developer Touch) */}
+                {project.problemSolved && (
+                  <div className="p-3 rounded-xl bg-slate-900/60 border border-cyan-500/15 text-xs text-slate-300 space-y-1">
+                    <span className="text-[11px] font-mono text-cyan-400 font-semibold uppercase">
+                      Problem Solved &amp; Architecture:
+                    </span>
+                    <p className="text-slate-300 leading-relaxed text-xs">
+                      {project.problemSolved}
+                    </p>
+                  </div>
+                )}
+
                 {/* Key Metrics / Highlights */}
                 <div className="space-y-1.5 bg-[#07090F]/70 p-4 rounded-xl border border-slate-800/80">
                   {project.metrics.map((m, mIdx) => (

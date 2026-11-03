@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   FileDown,
   Terminal,
-  Send,
   ExternalLink,
   Shield,
   Zap,
   Layers,
   Sparkles,
-  Monitor,
-  Box,
+  MessageSquare,
+  CheckCircle2,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { sound } from '../utils/soundEffects';
-import { Workstation3D } from './Workstation3D';
-import { HolographicDeskImage2 } from './HolographicDeskImage2';
+import { HumanCodeEditor } from './HumanCodeEditor';
 
 interface HeroSectionProps {
   onOpenTerminal: () => void;
@@ -26,15 +24,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onOpenTerminal,
   onOpenResume,
 }) => {
-  // Default to Style 2 (Image 2 - Holographic Desk Studio) as requested by user
-  const [workstationMode, setWorkstationMode] = useState<'hologram2' | 'isometric1'>('hologram2');
-
   const handleDownloadResume = () => {
     sound.playSuccess();
     try {
       confetti({
-        particleCount: 60,
-        spread: 70,
+        particleCount: 50,
+        spread: 60,
         origin: { y: 0.6 },
       });
     } catch {
@@ -44,63 +39,59 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden">
-      {/* Background radial glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-tr from-cyan-500/20 via-violet-500/20 to-transparent blur-[140px] pointer-events-none rounded-full" />
+      {/* Subtle organic ambient glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-gradient-to-tr from-cyan-500/15 via-blue-500/10 to-violet-500/15 blur-[120px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
         
-        {/* Top Developer Identity Header */}
-        <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
+        {/* Developer Human Header */}
+        <div className="max-w-3xl mx-auto text-center space-y-5">
           
-          {/* Status Pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/70 border border-cyan-500/40 text-xs font-mono text-cyan-300 shadow-[0_0_20px_rgba(0,229,255,0.2)] animate-pulse-glow">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-            <span className="w-2 h-2 rounded-full bg-emerald-400 -ml-4" />
-            <span>OPEN TO WORK • IMMEDIATE JOINER • BENGALURU &amp; CHENNAI &amp; REMOTE</span>
+          {/* Availability Pill */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-mono text-slate-200 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Available for Full-Time Roles &bull; Immediate Joiner (0 Days Notice)</span>
           </div>
 
-          {/* Main Headline */}
-          <div className="space-y-2">
-            <p className="font-mono text-xs sm:text-sm text-cyan-400 tracking-widest uppercase">
-              &lt;SENIOR WORKSTATION /&gt; HELLO, I'M
-            </p>
-            <h1 className="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white">
-              <span className="gradient-text-cyan-violet">SANDHIYA</span>
+          {/* Heading */}
+          <div className="space-y-3">
+            <h1 className="font-display font-extrabold text-4xl sm:text-6xl text-white tracking-tight">
+              Hey, I'm <span className="gradient-text-cyan-violet">Sandhiya</span>.
             </h1>
-            <h2 className="font-display font-semibold text-lg sm:text-2xl text-slate-200">
-              Python Full Stack Developer <span className="text-cyan-400">|</span> Software Engineer
-            </h2>
+            <p className="font-display font-semibold text-xl sm:text-2xl text-slate-200">
+              Python Full Stack Developer &amp; Backend Specialist
+            </p>
           </div>
 
-          {/* Punchy Narrative Quote */}
-          <p className="text-base sm:text-lg text-slate-300 font-light leading-relaxed max-w-2xl mx-auto">
-            "{PERSONAL_INFO.tagline}"
+          {/* Natural Human Bio */}
+          <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto">
+            I engineer secure, HIPAA-compliant clinical systems with <strong className="text-white">Python, Django REST Framework</strong>, and <strong className="text-white">PostgreSQL</strong>, paired with clean, responsive frontends in <strong className="text-white">React.js</strong>.
           </p>
 
-          {/* Key Strengths Chips */}
+          {/* Credibility Badges */}
           <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#0B1020]/90 border border-cyan-500/30 text-xs font-mono text-slate-200 shadow-sm">
-              <Shield className="w-3.5 h-3.5 text-cyan-400" /> HIPAA Healthcare IT
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-300">
+              <Shield className="w-3.5 h-3.5 text-cyan-400" /> Healthcare IT &amp; HIPAA
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#0B1020]/90 border border-violet-500/30 text-xs font-mono text-slate-200 shadow-sm">
-              <Zap className="w-3.5 h-3.5 text-violet-400" /> Django REST &amp; WebSockets
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-300">
+              <Zap className="w-3.5 h-3.5 text-violet-400" /> 15+ Production REST APIs
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#0B1020]/90 border border-blue-500/30 text-xs font-mono text-slate-200 shadow-sm">
-              <Layers className="w-3.5 h-3.5 text-blue-400" /> React &amp; TypeScript
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-300">
+              <Layers className="w-3.5 h-3.5 text-blue-400" /> React.js &amp; SPAs
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#0B1020]/90 border border-emerald-500/30 text-xs font-mono text-slate-200 shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-400" /> PostgreSQL &amp; MySQL
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-300">
+              <Sparkles className="w-3.5 h-3.5 text-emerald-400" /> 80%+ Unit Test Coverage
             </span>
           </div>
 
-          {/* Action Buttons */}
+          {/* Primary Action Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <a
               href="#projects"
               onClick={() => sound.playClick()}
-              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,229,255,0.4)] transition-all flex items-center gap-2 group cursor-pointer"
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium text-sm shadow-lg shadow-cyan-500/25 transition-all flex items-center gap-2 group cursor-pointer"
             >
-              <span>Explore Featured Projects</span>
+              <span>Explore My Work</span>
               <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
 
@@ -110,11 +101,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 handleDownloadResume();
                 onOpenResume();
               }}
-              className="px-5 py-3.5 rounded-xl bg-[#0B1020] hover:bg-slate-800 text-slate-200 border border-cyan-500/30 hover:border-cyan-400 font-medium text-sm transition-all flex items-center gap-2 shadow-sm cursor-pointer"
+              className="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-cyan-400 font-medium text-sm transition-all flex items-center gap-2 shadow-sm cursor-pointer"
             >
               <FileDown className="w-4 h-4 text-cyan-400" />
-              <span>View &amp; Download Resume</span>
+              <span>Download Resume (PDF)</span>
             </button>
+
+            <a
+              href={PERSONAL_INFO.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => sound.playClick()}
+              className="px-4 py-3 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/60 text-emerald-300 border border-emerald-500/40 text-sm font-medium transition-all flex items-center gap-2 cursor-pointer"
+            >
+              <MessageSquare className="w-4 h-4 text-emerald-400" />
+              <span>Chat on WhatsApp</span>
+            </a>
 
             <button
               type="button"
@@ -122,88 +124,38 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 sound.playClick();
                 onOpenTerminal();
               }}
-              className="px-4 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-violet-500/40 font-mono text-xs transition-all flex items-center gap-2 cursor-pointer"
-              title="Launch Terminal (Ctrl + K)"
+              className="px-3.5 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-800 font-mono text-xs flex items-center gap-1.5 cursor-pointer"
+              title="Open CLI Terminal (Ctrl + K)"
             >
               <Terminal className="w-4 h-4 text-violet-400" />
-              <span>Interactive CLI</span>
+              <span>CLI</span>
             </button>
           </div>
 
-          {/* Direct channels */}
+          {/* Quick Location & Direct Contact Line */}
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-400 pt-1">
+            <span>📍 Bengaluru / Chennai (Relocation Ready)</span>
+            <span className="text-slate-600">•</span>
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="hover:text-cyan-400 transition-colors flex items-center gap-1"
+              className="hover:text-cyan-400 transition-colors"
             >
-              <Send className="w-3.5 h-3.5" /> {PERSONAL_INFO.email}
-            </a>
-            <span className="text-slate-600">•</span>
-            <a
-              href={PERSONAL_INFO.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-emerald-400 transition-colors"
-            >
-              WhatsApp: +91 6374403353
-            </a>
-            <span className="text-slate-600">•</span>
-            <a
-              href={PERSONAL_INFO.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-violet-400 transition-colors"
-            >
-              github.com/sandhiyaprakasam23
+              {PERSONAL_INFO.email}
             </a>
           </div>
 
         </div>
 
-        {/* WORKSTATION VIEW SWITCHER (Allows toggling between Image 2 Holographic Desk and Image 1 Isometric Station) */}
-        <div className="flex items-center justify-center gap-3 mb-6 font-mono text-xs">
-          <span className="text-slate-400">Workstation View:</span>
-          <button
-            onClick={() => {
-              sound.playClick(750);
-              setWorkstationMode('hologram2');
-            }}
-            className={`px-3.5 py-1.5 rounded-xl border flex items-center gap-1.5 cursor-pointer transition-all ${
-              workstationMode === 'hologram2'
-                ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 font-bold shadow-[0_0_15px_rgba(0,229,255,0.3)]'
-                : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:text-white'
-            }`}
-          >
-            <Monitor className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Style 2: Holographic Studio (Image 2)</span>
-          </button>
+        {/* HUMAN DEVELOPER CODE WORKSPACE (Real VS Code with real tests) */}
+        <div className="pt-2">
+          <div className="text-center mb-3">
+            <span className="text-xs font-mono text-slate-400 uppercase tracking-wider flex items-center justify-center gap-2">
+              <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
+              Real Production Code &bull; Click files to inspect &amp; run test suite
+            </span>
+          </div>
 
-          <button
-            onClick={() => {
-              sound.playClick(650);
-              setWorkstationMode('isometric1');
-            }}
-            className={`px-3.5 py-1.5 rounded-xl border flex items-center gap-1.5 cursor-pointer transition-all ${
-              workstationMode === 'isometric1'
-                ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 font-bold shadow-[0_0_15px_rgba(0,229,255,0.3)]'
-                : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:text-white'
-            }`}
-          >
-            <Box className="w-3.5 h-3.5 text-violet-400" />
-            <span>Style 1: Isometric Space Station (Image 1)</span>
-          </button>
-        </div>
-
-        {/* ACTIVE WORKSTATION COMPONENT */}
-        <div className="mt-2">
-          {workstationMode === 'hologram2' ? (
-            <HolographicDeskImage2
-              onOpenTerminal={onOpenTerminal}
-              onOpenResume={onOpenResume}
-            />
-          ) : (
-            <Workstation3D />
-          )}
+          <HumanCodeEditor />
         </div>
 
       </div>

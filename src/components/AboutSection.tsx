@@ -1,33 +1,33 @@
 import React from 'react';
-import { ShieldCheck, Cpu, CheckCircle2, MapPin, Clock, Award } from 'lucide-react';
-import { PERSONAL_INFO } from '../data/portfolioData';
+import { ShieldCheck, Cpu, CheckCircle2, MapPin, Clock, Award, Code2 } from 'lucide-react';
+import { PERSONAL_INFO, EDUCATION } from '../data/portfolioData';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="relative py-24 sm:py-32">
+    <section id="about" className="relative py-20 sm:py-28 border-t border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="space-y-2 mb-16 text-center sm:text-left">
+        <div className="space-y-2 mb-14 text-center sm:text-left">
           <div className="inline-flex items-center gap-2 font-mono text-xs text-cyan-400 tracking-widest uppercase">
             <span>// 01. ABOUT ME</span>
           </div>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
-            Architecting Robust Backends &amp; Reactive Frontends
+          <h2 className="font-display font-bold text-3xl sm:text-4xl text-white">
+            Engineering with Production Discipline &amp; Craft
           </h2>
           <p className="text-slate-400 max-w-2xl text-sm sm:text-base">
-            Bridging complex clinical workflows, secure RESTful API design, and intuitive user experiences.
+            How a self-transitioned developer from Commerce built production systems handling 10,000+ sensitive healthcare records.
           </p>
         </div>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* Bio card */}
+          {/* Left Column: Authentic Human Story */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
+            <div className="p-6 sm:p-8 rounded-2xl bg-[#0B1020]/70 border border-slate-800 space-y-4">
               <h3 className="font-display font-semibold text-xl text-white flex items-center gap-2">
-                <span className="text-cyan-400">⚡</span> Engineering Philosophy
+                <Code2 className="w-5 h-5 text-cyan-400" /> My Journey &amp; Engineering Mindset
               </h3>
               
               <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
@@ -35,128 +35,106 @@ export const AboutSection: React.FC = () => {
               </p>
 
               <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-                In my current role in <strong className="text-emerald-300">Healthcare IT</strong> at Vesoftmetic Solution, I have architected and maintained full-stack clinical applications serving hospital environments under strict <strong className="text-cyan-300">HIPAA compliance</strong>. I design database schemas that handle 10,000+ sensitive records with rock-solid data integrity and build RESTful APIs consumed across diverse platforms.
+                I originally graduated with a <strong className="text-white">Bachelor of Commerce</strong>. But while studying business and financial ledgers, I became fascinated by how software actually automates and scales these systems. I committed to rigorous full-time technical training, fell in love with Python's clarity and Django's robustness, and earned my way into commercial engineering.
               </p>
 
               <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-                Self-transitioned from a background in Commerce into Full Stack Software Engineering through structured, disciplined technical immersion. This non-traditional path gives me a sharp sense of <strong className="text-amber-300">business ROI, SLA tracking, and operational efficiency</strong> (+25% improved workflows), combined with technical rigor in unit testing (80%+ coverage) and CI/CD pipelines.
+                In my current role at <strong className="text-emerald-300">Vesoftmetic Solution</strong>, I build clinical web applications in Healthcare IT. I spend my days designing <strong className="text-cyan-300">HIPAA-compliant RESTful APIs</strong>, optimizing relational database schemas handling 10,000+ sensitive patient records, and enforcing role-based access control (RBAC).
               </p>
 
-              {/* Status Pills */}
-              <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-slate-800/80">
-                <div className="flex items-center gap-2.5 text-xs font-mono text-slate-300">
+              {/* Status and Location row */}
+              <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-slate-800">
+                <div className="flex items-center gap-2 text-xs font-mono text-slate-300">
                   <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
                   <span>{PERSONAL_INFO.location}</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs font-mono text-slate-300">
+                <div className="flex items-center gap-2 text-xs font-mono text-slate-300">
                   <Clock className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>Immediate Joiner (0 Days Notice)</span>
                 </div>
               </div>
             </div>
 
-            {/* Core Competencies highlights */}
+            {/* Core Values Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-[#0B1020]/60 border border-slate-800 space-y-2">
+              <div className="p-4 rounded-xl bg-[#07090F]/80 border border-slate-800 space-y-2">
                 <div className="flex items-center gap-2 text-cyan-400 font-semibold text-sm">
                   <ShieldCheck className="w-4 h-4" />
-                  <span>HIPAA &amp; Security Mindset</span>
+                  <span>Zero-Compromise Security</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Deeply versed in JWT authentication, role-based access control (RBAC), data encryption, and immutable audit logging.
+                  Healthcare IT taught me that data security is not an afterthought. I implement strict JWT tokens, RBAC permissions, and immutable audit logs.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#0B1020]/60 border border-slate-800 space-y-2">
+              <div className="p-4 rounded-xl bg-[#07090F]/80 border border-slate-800 space-y-2">
                 <div className="flex items-center gap-2 text-violet-400 font-semibold text-sm">
                   <Cpu className="w-4 h-4" />
-                  <span>Clean API Engineering</span>
+                  <span>Automated Testing First</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Authored and documented 15+ RESTful APIs with Django REST Framework, rate-limiting, and Postman collections.
+                  I write unit tests (80%+ coverage) and integrate GitHub Actions CI/CD pipelines because software should never break unexpectedly in production.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right card: Technical DNA & Quick Radar */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="glass-panel-glow p-6 sm:p-7 rounded-2xl border border-cyan-500/25 space-y-6">
-              <div className="flex items-center justify-between border-b border-cyan-500/15 pb-4">
+          {/* Right Column: Everyday Toolkit & Engineering Principles */}
+          <div className="lg:col-span-5 space-y-5">
+            <div className="p-6 sm:p-7 rounded-2xl bg-[#0B1020]/70 border border-cyan-500/20 space-y-5">
+              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                 <div>
-                  <span className="font-mono text-xs text-cyan-400 uppercase tracking-wider">Profile Manifest</span>
-                  <h4 className="font-display font-bold text-lg text-white">Full Stack Engineering DNA</h4>
+                  <span className="font-mono text-xs text-cyan-400 uppercase tracking-wider">Engineering Blueprint</span>
+                  <h4 className="font-display font-bold text-lg text-white">How I Work Daily</h4>
                 </div>
-                <Award className="w-6 h-6 text-cyan-400" />
+                <Award className="w-5 h-5 text-cyan-400" />
               </div>
 
-              <div className="space-y-4 text-xs font-mono">
-                <div>
-                  <div className="flex justify-between text-slate-300 mb-1">
-                    <span>Python &amp; Django Ecosystem</span>
-                    <span className="text-cyan-400">Primary Core</span>
-                  </div>
-                  <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full w-[94%]" />
+              {/* Working Principles */}
+              <div className="space-y-3 text-xs text-slate-300">
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white">Clean API Contracts:</strong> Design REST endpoints with clear request/response models, validated payloads, and Postman documentation.
                   </div>
                 </div>
 
-                <div>
-                  <div className="flex justify-between text-slate-300 mb-1">
-                    <span>REST API Architecture &amp; DRF</span>
-                    <span className="text-cyan-400">Production Ready</span>
-                  </div>
-                  <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-cyan-400 to-violet-500 rounded-full w-[92%]" />
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white">Schema Normalization:</strong> Index foreign keys, write idempotent migration checkpoints, and prevent duplicate data pollution.
                   </div>
                 </div>
 
-                <div>
-                  <div className="flex justify-between text-slate-300 mb-1">
-                    <span>React.js &amp; Frontend SPAs</span>
-                    <span className="text-cyan-400">Advanced</span>
-                  </div>
-                  <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-violet-400 to-indigo-500 rounded-full w-[88%]" />
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-violet-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white">Empathetic Frontend UI:</strong> Build React SPAs that load fast, handle network errors gracefully, and respect users' time.
                   </div>
                 </div>
 
-                <div>
-                  <div className="flex justify-between text-slate-300 mb-1">
-                    <span>PostgreSQL &amp; MySQL Schemas</span>
-                    <span className="text-cyan-400">10k+ Records</span>
-                  </div>
-                  <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-blue-400 to-emerald-400 rounded-full w-[90%]" />
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between text-slate-300 mb-1">
-                    <span>CI/CD, Git, GitHub Actions &amp; Testing</span>
-                    <span className="text-cyan-400">80%+ Coverage</span>
-                  </div>
-                  <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full w-[86%]" />
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white">Agile &amp; Team Mindset:</strong> Active participant in sprint standups, PR code reviews, and cross-functional communication.
                   </div>
                 </div>
               </div>
 
-              {/* Quick checks */}
-              <div className="pt-2 border-t border-cyan-500/15 space-y-2 text-xs text-slate-300">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Immediate availability for interviews &amp; onboarding</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                  <span>Comfortable in fast-paced Agile / Scrum sprints</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-violet-400 shrink-0" />
-                  <span>Native Tamil speaker, professional English proficiency</span>
+              {/* Communication Languages */}
+              <div className="pt-3 border-t border-slate-800 text-xs font-mono space-y-1.5">
+                <span className="text-slate-400">Languages:</span>
+                <div className="flex gap-2 text-slate-200">
+                  <span className="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Tamil (Native)</span>
+                  <span className="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">English (Professional)</span>
                 </div>
               </div>
+            </div>
+
+            {/* Quick Education Card */}
+            <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-xs font-mono space-y-1">
+              <span className="text-slate-400 uppercase">Degree:</span>
+              <p className="text-white font-semibold">{EDUCATION.degree} &bull; {EDUCATION.institution} ({EDUCATION.period})</p>
             </div>
           </div>
 
