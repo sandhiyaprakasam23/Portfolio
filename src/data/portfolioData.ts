@@ -159,7 +159,8 @@ export const PROJECTS: Project[] = [
       "500+ code conversion requests served"
     ],
     liveUrl: "https://dainty-beignet-5d275e.netlify.app/",
-    featured: false,
+    githubUrl: "https://github.com/sandhiyaprakasam23",
+    featured: true,
     architecturePoints: [
       "Django REST API with request caching and syntax validation",
       "React split-screen interface with instant side-by-side rendering",
@@ -184,7 +185,8 @@ export const PROJECTS: Project[] = [
       "One-click copy with responsive testing preview"
     ],
     liveUrl: "https://steady-tapioca-8728c8.netlify.app/",
-    featured: false,
+    githubUrl: "https://github.com/sandhiyaprakasam23",
+    featured: true,
     architecturePoints: [
       "Clean component-based architecture with interactive live preview",
       "Input validation and smart error handling for incomplete prompts",
